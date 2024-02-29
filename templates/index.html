@@ -14,7 +14,14 @@
     <button onclick="addTask()">Add Task</button>
     <ul id="taskList"></ul>
 </div>
-
+<form action="/concat_words" method="post">
+    <input type="text" name="word1" placeholder="첫 번째 단어">
+    <input type="text" name="word2" placeholder="두 번째 단어">
+    <button type="submit">단어 합치기</button>
+</form>
+{% if result %}
+    <p>합친 단어: {{ result }}</p>
+{% endif %}
 <script src="/static/script.js"></script>
 </body>
 </html>
